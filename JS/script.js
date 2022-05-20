@@ -1,7 +1,15 @@
+// ========================================== Grabbing all the elemements ==============================================
+
 const playerOne = document.getElementById("playerone");
 const playerTwo = document.getElementById("playertwo");
 const elementsArr = Array.from(document.querySelectorAll(".game-board > div"));
 const positions = {};
+const who = document.querySelector(".turn");
+const dice = document.querySelector(".dice");
+
+
+
+// ============================================ Declaring necessary vairables and constants ============================
 const snakes = {
   one: {
     from: 46,
@@ -36,37 +44,56 @@ const ladders = {
   },
 };
 
-window.onload= ()=>{
- 
- window.innerWidth < 1000 ? console.log('sdfjsd'):null
-}
-const who = document.querySelector(".turn");
-const dice = document.querySelector(".dice");
+
+
 const normaldiceaudio = new Audio("/Assets/RATTLE2.wav");
 const six = new Audio("/Assets/6.mp3");
 let num;
 let playeroneposition = 1;
 let playertwoposition = 1;
 let turn = "player one";
+
+
+
+
+
+
+
+window.onload= function(){
+ 
+ window.innerWidth  < 1000 ? document.querySelector('section').style.display = "none" : null 
+}
+
 elementsArr.forEach((elem, index, arr) => {
   positions[elem.classList[0]] = elem.getBoundingClientRect();
 });
 
+
+// ==================================================== Logic of the game starts here ==================================
+
+
+
+
+// ======================================= rolling the dice ====================================
 dice.addEventListener("click", () => {
   normaldiceaudio.play();
   setTimeout(() => {
     num = Math.floor(Math.random() * 6 + 1);
-
+    
     dice.textContent = num;
     flipplayer();
     move(turn, num);
   }, 300);
 });
 
+// =========================== flipping the turns ================================================
+
 function flipplayer() {
   turn == "player one" ? (turn = "player two") : (turn = "player one");
   who.innerText = `${turn}'s  turn Roll the dice`;
 }
+
+// ============================= moving the tokens =====================================================
 
 function move(turn, num) {
   if (
@@ -126,6 +153,8 @@ function move(turn, num) {
   isWinner(turn);
 }
 
+
+ // ============================= checking if there is any snake or ladder where the token currently is =================
 function isSnake(turn) {
   for (let snake in snakes) {
     playeroneposition == snakes[snake].from
@@ -136,6 +165,20 @@ function isSnake(turn) {
   }
 }
 
+
+function isLadder(turn) {
+  for (let ladder in ladders) {
+    playeroneposition == ladders[ladder].from
+    ? eatenorclimb(turn, ladders[ladder].to)
+    : playertwoposition == ladders[ladder].from
+    ? eatenorclimb(turn, ladders[ladder].to)
+    : null;
+  }
+}
+
+
+
+// ====================== moving the token according to the snakeor ladder  if there is any ===========================
 function eatenorclimb(player, goto) {
   six.play()
   if (player === "player one") {
@@ -159,16 +202,9 @@ function eatenorclimb(player, goto) {
   }
 }
 
-function isLadder(turn) {
-  for (let ladder in ladders) {
-    playeroneposition == ladders[ladder].from
-      ? eatenorclimb(turn, ladders[ladder].to)
-      : playertwoposition == ladders[ladder].from
-      ? eatenorclimb(turn, ladders[ladder].to)
-      : null;
-  }
-}
 
+
+// =========================== checking the winner and declaring it =================================
 function isWinner(turn) {
   if (turn == "player one" && playeroneposition == 100) {
 
