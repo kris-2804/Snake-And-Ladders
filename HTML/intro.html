@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <title>Snake & Ladder</title>
+</head>
+<body>
+    <div
+    class="overlay absolute z-10 inset-0 h-[100vh] w-[100vw]  text-black flex items-center justify-evenly flex-col  bg-gradient-to-r from-[#9796f0] to-[#fbc7d4]">
+    <h1 class="text-3xl mobile:text-[1.5rem] font-bold mobile:font-semibold">
+        SNAKE AND LADDER
+    </h1>
+    <div class="playbutton-container">
+        <img src="/Assets/play-button-svgrepo-com.svg" alt="playbutton" class="mobile:w-[50px] w-[100px]" />
+    </div>
+    <div class="playbutton">
+        <a  href="./index.html"   class="text-[2rem]  p-2 border-2 border-black" target="_self">PLAY</a>
+    </div>
+</div>
+<script  defer>
+    const overlay = document.querySelector(".overlay");
+const playbtn = document.querySelector("a");
+    playbtn.onclick = () => {
+  overlay.classList.toggle("hidden");
+};
+</script>
+</body>
+</html>

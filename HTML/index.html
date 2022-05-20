@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake & Ladder</title>
+    <link rel="stylesheet" href="/CSS/styles.css" />
+
+</head>
+
+<body class=" relative  bg-gradient-to-r from-[#9796f0] to-[#fbc7d4] ">
+
+
+
+    <section class="h-max   w-[1200px] max-w-[2200px]  min-h-[1000px] min-w-[2200px] relative mx-auto">
+        <div class="game-containerflex flex-col items-center justify-center  ">
+
+            <div class="game-board grid gap-0 self-stretch justify-self-stretch  w-max mx-auto my-8 ">
+                <div class="num100 mobile:h-8 mobile:w-8    p-3">100</div>
+                <div class="num99 mobile:h-8 mobile:w-8  p-3">99</div>
+                <div class="num98 mobile:h-8 mobile:w-8  p-3">98</div>
+                <div class="num97 mobile:h-8 mobile:w-8  p-3">97</div>
+                <div class="num96 mobile:h-8 mobile:w-8  p-3">96</div>
+                <div class="num95 mobile:h-8 mobile:w-8  p-3">95</div>
+                <div class="num94 mobile:h-8 mobile:w-8  p-3">94</div>
+                <div class="num93 mobile:h-8 mobile:w-8  p-3">93</div>
+                <div class="num92 mobile:h-8 mobile:w-8  p-3">92</div>
+                <div class="num91 mobile:h-8 mobile:w-8  p-3">91</div>
+                <div class="num81 mobile:h-8 mobile:w-8  p-3">81</div>
+                <div class="num82 mobile:h-8 mobile:w-8  p-3">82</div>
+                <div class="num83 mobile:h-8 mobile:w-8  p-3">83</div>
+                <div class="num84 mobile:h-8 mobile:w-8  p-3">84</div>
+                <div class="num85 mobile:h-8 mobile:w-8  p-3">85</div>
+                <div class="num86 mobile:h-8 mobile:w-8  p-3">86</div>
+                <div class="num87 mobile:h-8 mobile:w-8  p-3">87</div>
+                <div class="num88 mobile:h-8 mobile:w-8  p-3">88</div>
+                <div class="num89 mobile:h-8 mobile:w-8  p-3">89</div>
+                <div class="num90 mobile:h-8 mobile:w-8  p-3">90</div>
+                <div class="num80 mobile:h-8 mobile:w-8  p-3">80</div>
+                <div class="num79 mobile:h-8 mobile:w-8  p-3">79</div>
+                <div class="num78 mobile:h-8 mobile:w-8  p-3">78</div>
+                <div class="num77 mobile:h-8 mobile:w-8  p-3">77</div>
+                <div class="num76 mobile:h-8 mobile:w-8  p-3">76</div>
+                <div class="num75 mobile:h-8 mobile:w-8  p-3">75</div>
+                <div class="num74 mobile:h-8 mobile:w-8  p-3">74</div>
+                <div class="num73 mobile:h-8 mobile:w-8  p-3">73</div>
+                <div class="num72 mobile:h-8 mobile:w-8  p-3">72</div>
+                <div class="num71 mobile:h-8 mobile:w-8  p-3">71</div>
+                <div class="num61 mobile:h-8 mobile:w-8  p-3">61</div>
+                <div class="num62 mobile:h-8 mobile:w-8  p-3">62</div>
+                <div class="num63 mobile:h-8 mobile:w-8  p-3">63</div>
+                <div class="num64 mobile:h-8 mobile:w-8  p-3">64</div>
+                <div class="num65 mobile:h-8 mobile:w-8  p-3">65</div>
+                <div class="num66 mobile:h-8 mobile:w-8  p-3">66</div>
+                <div class="num67 mobile:h-8 mobile:w-8  p-3">67</div>
+                <div class="num68 mobile:h-8 mobile:w-8  p-3">68</div>
+                <div class="num69 mobile:h-8 mobile:w-8  p-3">69</div>
+                <div class="num70 mobile:h-8 mobile:w-8  p-3">70</div>
+                <div class="num60 mobile:h-8 mobile:w-8  p-3">60</div>
+                <div class="num59 mobile:h-8 mobile:w-8  p-3">59</div>
+                <div class="num58 mobile:h-8 mobile:w-8  p-3">58</div>
+                <div class="num57 mobile:h-8 mobile:w-8  p-3">57</div>
+                <div class="num56 mobile:h-8 mobile:w-8  p-3">56</div>
+                <div class="num55 mobile:h-8 mobile:w-8  p-3">55</div>
+                <div class="num54 mobile:h-8 mobile:w-8  p-3">54</div>
+                <div class="num53 mobile:h-8 mobile:w-8  p-3">53</div>
+                <div class="num52 mobile:h-8 mobile:w-8  p-3">52</div>
+                <div class="num51 mobile:h-8 mobile:w-8  p-3">51</div>
+                <div class="num41 mobile:h-8 mobile:w-8  p-3">41</div>
+                <div class="num42 mobile:h-8 mobile:w-8  p-3">42</div>
+                <div class="num43 mobile:h-8 mobile:w-8  p-3">43</div>
+                <div class="num44 mobile:h-8 mobile:w-8  p-3">44</div>
+                <div class="num45 mobile:h-8 mobile:w-8  p-3">45</div>
+                <div class="num46 mobile:h-8 mobile:w-8  p-3">46</div>
+                <div class="num47 mobile:h-8 mobile:w-8  p-3">47</div>
+                <div class="num48 mobile:h-8 mobile:w-8  p-3">48</div>
+                <div class="num49 mobile:h-8 mobile:w-8  p-3">49</div>
+                <div class="num50 mobile:h-8 mobile:w-8  p-3">50</div>
+                <div class="num40 mobile:h-8 mobile:w-8  p-3">40</div>
+                <div class="num39 mobile:h-8 mobile:w-8  p-3">39</div>
+                <div class="num38 mobile:h-8 mobile:w-8  p-3">38</div>
+                <div class="num37 mobile:h-8 mobile:w-8  p-3">37</div>
+                <div class="num36 mobile:h-8 mobile:w-8  p-3">36</div>
+                <div class="num35 mobile:h-8 mobile:w-8  p-3">35</div>
+                <div class="num34 mobile:h-8 mobile:w-8  p-3">34</div>
+                <div class="num33 mobile:h-8 mobile:w-8  p-3">33</div>
+                <div class="num32 mobile:h-8 mobile:w-8  p-3">32</div>
+                <div class="num31 mobile:h-8 mobile:w-8  p-3">31</div>
+                <div class="num21 mobile:h-8 mobile:w-8  p-3">21</div>
+                <div class="num22 mobile:h-8 mobile:w-8  p-3">22</div>
+                <div class="num23 mobile:h-8 mobile:w-8  p-3">23</div>
+                <div class="num24 mobile:h-8 mobile:w-8  p-3">24</div>
+                <div class="num25 mobile:h-8 mobile:w-8  p-3">25</div>
+                <div class="num26 mobile:h-8 mobile:w-8  p-3">26</div>
+                <div class="num27 mobile:h-8 mobile:w-8  p-3">27</div>
+                <div class="num28 mobile:h-8 mobile:w-8  p-3">28</div>
+                <div class="num29 mobile:h-8 mobile:w-8  p-3">29</div>
+                <div class="num30 mobile:h-8 mobile:w-8  p-3">30</div>
+                <div class="num20 mobile:h-8 mobile:w-8  p-3">20</div>
+                <div class="num19 mobile:h-8 mobile:w-8  p-3">19</div>
+                <div class="num18 mobile:h-8 mobile:w-8  p-3">18</div>
+                <div class="num17 mobile:h-8 mobile:w-8  p-3">17</div>
+                <div class="num16 mobile:h-8 mobile:w-8  p-3">16</div>
+                <div class="num15 mobile:h-8 mobile:w-8  p-3">15</div>
+                <div class="num14 mobile:h-8 mobile:w-8  p-3">14</div>
+                <div class="num13 mobile:h-8 mobile:w-8  p-3">13</div>
+                <div class="num12 mobile:h-8 mobile:w-8  p-3">12</div>
+                <div class="num11 mobile:h-8 mobile:w-8  p-3">11</div>
+                <div class="num1 mobile:h-8 mobile:w-8  p-3 ">1
+                    <div class="plyeronetoken absolute m-1 w-[15px] h-[15px] rounded-lg   bg-white  translate-x-4 z-10"
+                        id="playerone"></div>
+                    <div class="plyeronetoken absolute m-1 w-[15px] h-[15px] rounded-lg translate-x-2  bg-black z-10 "
+                        id="playertwo"></div>
+                </div>
+                <div class="num2 mobile:h-8 mobile:w-8  p-3">2</div>
+                <div class="num3 mobile:h-8 mobile:w-8  p-3">3</div>
+                <div class="num4 mobile:h-8 mobile:w-8  p-3">4</div>
+                <div class="num5 mobile:h-8 mobile:w-8  p-3">5</div>
+                <div class="num6 mobile:h-8 mobile:w-8  p-3">6</div>
+                <div class="num7 mobile:h-8 mobile:w-8  p-3">7</div>
+                <div class="num8 mobile:h-8 mobile:w-8  p-3">8</div>
+                <div class="num9 mobile:h-8 mobile:w-8  p-3">9</div>
+                <div class="num10 mobile:h-8 mobile:w-8  p-3">10</div>
+            </div>
+
+        </div>
+        <div class="snakes-and-ladder-container">
+            <img src="/Assets/image-removebg-preview (2).png" alt="Ladder"
+                class=" absolute   rotate-[0deg] h-[13rem] top-[550px] left-[840px]" id="ladderone">
+            <img src="/Assets/image-removebg-preview (1).png" alt="Ladder"
+                class=" absolute h-[300px] rotate-[20deg]  top-[470px] left-[1270px]" id="laddertwo">
+            <img src="/Assets/ladder1.png" alt="Ladder" class="absolute  h-[400px] top-[550px] left-[820px]"
+                id="ladderthree">
+            <img src="/Assets/snake1.png" alt="Snake" class="absolute h-[200px] top-[330px] left-[800px]" id="snakeone">
+            <img src="/Assets/snake2.png" alt="Snake"
+                class="absolute h-[350px]  top-[140px] left-[650px] rotate-[20deg]" id="snaketwo">
+            <img src="/Assets/snake3.png" alt="Snake"
+                class="absolute h-[350px] left-[1000px] top-[580px] rotate-[180deg]    " id="snakethree">
+            <img src="/Assets/snake4.png" alt="Snake" class="absolute  h-[400px] left-[970px] top-[25px]"
+                id="snakethree">
+        </div>
+        <div class=" turn text-xl text-center my-2">player one's turn Roll the dice to start </div>
+        <div class="dice w-[100px] h-[100px] text-[3rem] text-center  bg-white mx-auto rounded cursor-pointer">
+        </div>
+        </div>
+    </section>
+    <script src="/JS/script.js" defer></script>
+</body>
+
+</html>

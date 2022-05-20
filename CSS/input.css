@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.game-board{
+    grid-template-rows:  repeat(10, minmax(0, 1fr));
+    grid-template-columns:  repeat(10, minmax(0, 1fr));
+    grid-column-gap: 0 !important;
+    border-right: 1px solid white;
+  
+    grid-row-gap: 0 !important;
+gap: 0 !important;
+}
+.game-board > div {
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    background: green;
+    margin: 0;
+  
+   
+    
+}
+.game-board > div:nth-of-type(2n+1){
+    background: orange;
+}
+::-webkit-scrollbar{
+    display: none;  
+}
+.game-board > div.num1{
+    background-image: url("/Assets/Start.jpg") !important;
+    background-position: center;
+    background-size: cover;
+    color: white;
+   
+}
+
+.game-board > div.num100{
+    background-image: url(/Assets/home.png) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color: white;
+}
+body{
+    background-repeat: no-repeat;
+   
+}
+#playerone{
+transition: all 500ms;
+}
+#playertwo{
+transition:  all 500ms;
+}
+.game-board > div{
+    width: 100px;
+    height: 100px;
+    font-size: larger;
+}
